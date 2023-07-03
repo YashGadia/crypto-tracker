@@ -79,7 +79,7 @@ export default function Coinstable() {
 
                     <TableBody>
                           {handleSearch().slice((page-1)*10, (page)*10).map((row)=>{
-                            const profit=row.price_change_precentage_24h > 0;
+                            const profit = row.price_change_percentage_24h > 0;
                             
                             return (
                               <TableRow onClick={()=> history.push(`/coins/${row.id}`)} className={classes.row} key={row.name}>
@@ -104,7 +104,7 @@ export default function Coinstable() {
 
                                 <TableCell align="right" style={{color: profit>0 ? "rgb(14, 203, 129)" : "red", fontWeight: 500}}>
                                     {profit && "+"}
-                                    {row.current_price.toFixed(2)}%
+                                    {row.price_change_percentage_24h.toFixed(2)}%
                                 </TableCell>
 
                                 <TableCell align="right">

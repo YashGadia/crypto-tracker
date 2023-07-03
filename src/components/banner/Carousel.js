@@ -1,9 +1,10 @@
-import { Link, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { CryptoState } from '../../CryptoContext';
 import {TrendingCoins} from '../../config/api';
 import AliceCarousel from 'react-alice-carousel';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(()=>({
     carousel: {

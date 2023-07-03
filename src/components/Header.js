@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { CryptoState } from '../CryptoContext';
 import AuthModal from './authentication/AuthModal';
 import UserSidebar from './authentication/UserSidebar';
+import logo from '../crypto-icon1.png';
 
 const useStyles = makeStyles(()=>({
     title: {
@@ -12,6 +13,9 @@ const useStyles = makeStyles(()=>({
         fontFamily: "Montserrat",
         fontWeight: "bold",
         cursor: "pointer"
+    },
+    icon: {
+        paddingRight: 10,
     }
 }))
 
@@ -39,6 +43,7 @@ const Header = () => {
             {/* Container makes screen responsive */}
             <Container>  
                 <Toolbar>
+                    <img src={logo} alt='Logo' className={classes.icon} height="45" />
                     <Typography onClick={()=> history.push("/")} className={classes.title} variant='h6'>
                         Crypto Tracker
                     </Typography>

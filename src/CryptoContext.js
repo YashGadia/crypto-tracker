@@ -10,7 +10,7 @@ const Crypto = createContext();
 const CryptoContext = ({children}) => {
   
   const [currency, setCurrency] = useState("INR")
-  const [symbol, setSymbol] = useState("Rs.")
+  const [symbol, setSymbol] = useState("₹")
 
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -35,7 +35,7 @@ const CryptoContext = ({children}) => {
 
         }
       });
-      
+
       return () => {
         unsubscribe();
       };
@@ -57,7 +57,7 @@ const CryptoContext = ({children}) => {
   };
 
   useEffect(()=>{
-    if(currency === "INR") setSymbol("Rs.")
+    if(currency === "INR") setSymbol("₹")
     else if(currency === "USD") setSymbol("$")
   }, [currency]);
   // Whenever currency changes -> useEffect will run as 'currency' is added in [].  
