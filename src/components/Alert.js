@@ -8,7 +8,7 @@ const Alert = () => {
   const {alert, setAlert} = CryptoState();
 
   const handleClose = (event, reason) => {
-    if(reason=="clickaway"){
+    if(reason==="clickaway"){
         return;
     }
     setAlert({open: false});
