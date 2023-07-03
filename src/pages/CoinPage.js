@@ -8,7 +8,7 @@ import CoinInfo from '../components/CoinInfo';
 import { numberWithCommas } from '../components/banner/Carousel';
 import { doc, setDoc } from 'firebase/firestore';
 import { db } from '../firebase';
-import ReactHtmlParser from "react-html-parser";
+import ReactHtmlParser from "html-react-parser";
 
 
 const CoinPage = () => {
